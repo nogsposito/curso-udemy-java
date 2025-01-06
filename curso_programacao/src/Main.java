@@ -7,24 +7,35 @@ public class Main {
         Locale.setDefault(Locale.US);
         
         Scanner sc = new Scanner(System.in);
+
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        int z = sc.nextInt();
+
+        int higher = max(x, y, z);
+
+        showResult(higher);
         
-        String original = "abc dEf ghi";
-
-        String s01 = original.toLowerCase();
-        String s02 = original.toUpperCase();
-        String s03 = original.substring(2, 6);
-        String s04 = original.replace('c', 'x');
-        String s05 = original.replace("abc", "xyz");
-        String[] vect = original.split(" ");
-
-        System.out.println(s01);
-        System.out.println(s02);
-        System.out.println(s03);
-        System.out.println(s04);
-        System.out.println(s05);
-        System.out.println(vect[0]);
-
         sc.close();
 
+    }
+
+    public static int max (int a, int b, int c){
+        
+        int aux;
+
+        if (a > b && a > c){
+            aux = a;
+        } else if (b > a && b > c){
+            aux = b;
+        } else {
+            aux = c;
+        }
+
+        return aux;
+    }
+
+    public static void showResult(int value){
+        System.out.println("Higher: " + value);
     }
 }
