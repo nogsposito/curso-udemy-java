@@ -3,6 +3,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Triangle;
+
 public class Program {
     public static void main(String[] args) throws Exception {
 
@@ -10,46 +12,34 @@ public class Program {
         
         Scanner sc = new Scanner(System.in);
 
-        double tri1a, tri1b, tri1c;
-        double tri2a, tri2b, tri2c;
+        Triangle x, y;
+
+        x = new Triangle();
+        y = new Triangle();
 
         System.out.println("Digite os lados do primeiro triângulo: ");
-        tri1a = sc.nextDouble();
-        tri1b = sc.nextDouble();
-        tri1c = sc.nextDouble();
+        x.a = sc.nextDouble();
+        x.b = sc.nextDouble();
+        x.c = sc.nextDouble();
         
         System.out.println("Digite os lados do segundo triângulo: ");
-        tri2a = sc.nextDouble();
-        tri2b = sc.nextDouble();
-        tri2c = sc.nextDouble();
+        y.a = sc.nextDouble();
+        y.b = sc.nextDouble();
+        y.c = sc.nextDouble();
 
-        int biggest = maior(tri1a, tri1b, tri1c, tri2a, tri2b, tri2c);
+        double areaX = x.area();
+        double areaY = y.area();
 
-        System.out.println("MAIOR: TRIANGULO " + biggest);
+        System.out.println("AREA TRIANGULO X: " + areaX);
+        System.out.println("AREA TRIANGULO Y: " + areaY);
+
+        if (areaX >  areaY){
+            System.out.println("TRAINGULO MAIOR: X");
+        } else {
+            System.out.println("TRIANGULO MAIOR: Y");
+        }
         
         sc.close();
-
-    }
-
-    public static int maior(double tri1a, double tri1b, double tri1c, double tri2a, double tri2b, double tri2c){
-        
-        double area1, area2;
-        double p1, p2;
-        
-        p1 = ((tri1a + tri1b + tri1c)/2);
-        area1 = Math.sqrt(p1*(p1-tri1a)*(p1-tri1b)*(p1-tri1c));
-        
-        p2 = ((tri2a + tri2b + tri2c)/2);
-        area2 = Math.sqrt(p2*(p2-tri2a)*(p2-tri2b)*(p2-tri2c));
-        
-        System.out.println("Area do 1: " + area1);
-        System.out.println("Area do 2: " + area2);
-        
-        if (area1 > area2){
-            return 1;
-        }else{
-            return 2;
-        }
 
     }
 }
