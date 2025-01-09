@@ -3,7 +3,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import util.Calculator;
+import util.CurrencyCoverter;
 
 public class Program {
     public static void main(String[] args) throws Exception {
@@ -12,14 +12,16 @@ public class Program {
         
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite o raio: ");
-        double radius = sc.nextDouble();
+        System.out.println("Digite o valor do dólar: ");
+        double dolar = sc.nextDouble();
 
-        double c = Calculator.circunference(radius);
-        double v = Calculator.volume(radius);
+        System.out.println("Quantos doláres serão comprados?");
+        double quantity = sc.nextDouble();
 
-        System.out.println(c + " " + v + " " + Calculator.PI);
-        
+        double result = CurrencyCoverter.result(dolar, quantity);
+
+        System.out.println("Amount: " + result);
+
         sc.close();
 
     }
