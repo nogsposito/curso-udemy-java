@@ -3,7 +3,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import util.CurrencyCoverter;
+import entities.Product;
 
 public class Program {
     public static void main(String[] args) throws Exception {
@@ -12,15 +12,10 @@ public class Program {
         
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite o valor do dólar: ");
-        double dolar = sc.nextDouble();
+        Product prod = new Product();
 
-        System.out.println("Quantos doláres serão comprados?");
-        double quantity = sc.nextDouble();
-
-        double result = CurrencyCoverter.result(dolar, quantity);
-
-        System.out.println("Amount: " + result);
+        prod.setName("TV");
+        System.out.println("Nome do produto: ");
 
         sc.close();
 
