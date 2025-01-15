@@ -38,6 +38,7 @@ public class Program6 {
         int quant = sc.nextInt();
 
         for (int i = 0; i < quant; i++){
+            
             System.out.println("Contrato " + (i+1) + ": ");
 
             System.out.println("Date (DD/MM/YYYY)");
