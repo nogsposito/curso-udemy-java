@@ -36,7 +36,7 @@ public class Account {
     }
 
     public void withdraw(double amount){
-        balance -= amount; //saque
+        balance -= amount + 5.0; //saque com taxa
     }
 
     public void deposit(double amount){
