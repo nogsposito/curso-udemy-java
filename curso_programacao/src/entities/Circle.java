@@ -20,7 +20,7 @@ public class Circle extends Shape {
 
     @Override
     public double area(){
-        return 2 * 3.14 * radius;
+        return 3.14 * radius * radius;
     }
 
 }
