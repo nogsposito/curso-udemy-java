@@ -22,7 +22,7 @@ public class UsedProduct2 extends Product2 {
 
     @Override
     public String priceTag(){
-        return getName() + " $" + String.format("&.2f", getPrice()) + " (Manufacture date: " + manufactureDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + ")";
+        return getName() + " $" + String.format("%.2f", getPrice()) + " (Manufacture date: " + manufactureDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + ")";
     }
 
 }
