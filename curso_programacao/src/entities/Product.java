@@ -51,6 +51,10 @@ public class Product {
         this.quantity -= quantity;
     }
 
+    public boolean nonStaticProductPredicate(){ // estatico usa o que for retornado para ele  no parametro
+        return price >= 100;
+    }
+
     public String toString(){
         return name + ", $ " + String.format("%.2f", price) + ", " + quantity + " units, Total: $ " + String.format("%.2f", totalValueInStock());
     }
