@@ -55,6 +55,14 @@ public class Product {
         return price >= 100;
     }
 
+    public static String staticUpperCaseName(Product p){
+        return p.getName().toUpperCase();
+    }
+
+    public String nonStaticUpperCaseName(){
+        return name.toUpperCase();
+    }
+
     public String toString(){
         return name + ", $ " + String.format("%.2f", price) + ", " + quantity + " units, Total: $ " + String.format("%.2f", totalValueInStock());
     }
