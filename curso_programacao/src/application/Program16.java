@@ -10,7 +10,7 @@ import entities.Vehicle;
 import model.services.BrazilTaxService;
 import model.services.RentalService;
 
-public class Programa16 {
+public class Program16 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
 
